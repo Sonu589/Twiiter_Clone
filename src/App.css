@@ -1,38 +1,281 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family: 'Lato', sans-serif;
+}
+.twitter{
+    display:flex;
+    
+}
+.sidebar{
+  width:25%;
+  position:fixed;
+  left:0;
+  height:100%;
+  border-right:1px solid #e6ecf0;
+}
+.sidebar ul{
+  list-style-type:none;
+}
+.sidebar ul li a{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  color:black;
+  padding:18px 35px;
+  font-weight:700;
+  font-size:18px;
+  letter-spacing:1px;
+
+}
+.sidebar ul li a:hover{
+  background:#e8f5fe;
+  color:#1da1f2;
+  border-radius:50px;
+  font-weight:1000px;
+}
+.icons{
+  margin-right:15px;
+  font-size:25px;
+}
+.logo{
+  color:#1da1f2;
+}
+.sidebar__btn{
+  /* top or bottom / right */
+  margin:15px 0;
+  cursor:pointer;
+}
+.sidebar__btn a{
+  text-decoration:none;
+  background:#1da1f2;
+  color:#fff;
+  /* Top and bottom */
+  padding:13px 35px;
+  margin:0 35px;
+  border-radius:50px;
+  outline:none;
+  display:block;
+  text-align:center;
+  letter-spacing: 2px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Home section style */
+.Post{
+  width:50%;
+  margin-left:25%;
+  border-right:1px solid #e6ecf0;
+}
+.Post_home{
+  width:50%;
+  top:0;
+  position:fixed;
+  padding:15px ;
+  font-weight:700;
+  border-bottom:1px solid #e6ecf0;
+  background:#fff;
+  border-right:1px solid #e6ecf0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Home{
+  padding-top:70px;
+  border-bottom:1px solid #e6ecf0;
+  padding-bottom:20px;
+}
+.Home_first{
+  display:flex;
+  padding:0 20px;
+  align-items:center
+}
+.Home_img{
+  width:50px;
+  height:50px;
+  overflow:hidden;
+  border-radius:50%;
+}
+.Home_img img{
+  width:100%;
+  height:100%;
+}
+.Home_input{
+  margin-left:20px;
+
+}
+.Home_control{
+  border:none;
+  outline:none;
+  font-size:20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.Home_second{
+  margin-left:20px;
+  margin-top:15px;
+  display:flex;
+}
+
+.ic{
+  margin:0 6px;
+  font-size:20px;
+  cursor:pointer;
+  color:#1da1f2;
+}
+
+.Home_icons{
+  width:50%;
+}
+.Home_btn{
+  width:50%;
+  text-align:right;
+  margin-right:20px;
+}
+
+.Home_btn a{
+  text-decoration:none;
+  background:#1da1f2;
+  color:#fff;
+  border-radius:50px;
+  outline:none;
+  cursor:pointer;
+  padding:10px 20px;
+}
+
+/* Post Section */
+.post{
+  padding:20px;
+  border-bottom:1px solid #e6ecf0;
+}
+.post_first{
+  display:flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.post_first_img{
+  width:50px;
+  height:50px;
+  overflow:hidden;
+  border-radius:50%;
+}
+.post_first_img img{
+  width:100%;
+  height:100%;
+}
+.post_first_name{
+  margin-left:6px;
 }
 
-.App-link {
-  color: #61dafb;
+.post_first_user{
+  margin-left:6px;
+  color:silver;
+  font-weight:300;
+}
+.post_first_user span{
+  display:inline-block;
+  margin-left:5px;
+  font-size:14px;
+}
+.verify{
+  margin-left:3px;
+  color:#1da1f2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post_detail{
+  margin:8px 30px;
+  overflow:hidden;
+}
+.post_detail_img{
+  margin-top:6px;
+  width:100%;
+}
+.post_detail_img img{
+   width:100%;
+}
+.reaction{
+  display:flex;
+  margin:8px 0;
+  justify-content:space-between;
+  align-items:center;
+  color:silver;
+  font-weight: bold;
+}
+.trends{
+   width:25%;
+}
+.trends_search{
+  position:fixed;
+  width:25%;
+  top:10px;
+  right:0;
+  /* border-bottom:1px solid #e6ecf0; */
+  padding-bottom:20px;
+  margin-left:20px;
+
+}
+.trends_control{
+  border:none;
+  width:90%;
+  margin-left:20px;
+  outline:none;
+  background:#f5f4f2;
+  border-radius:50px;
+  padding:15px 40px;
+}
+.trend_icon{
+  position:absolute;
+  top:15px;
+  left:40px;
+}
+.search{
+  font-size:20px;
+  color:silver;
+
+}
+.keywords{
+  position:fixed;
+  top:80px;
+  right:0px;
+  width:25%;
+  padding:20px 20px;
+}
+.key{
+   background: #f5f8fa;
+   padding: 15px ;
+   border-radius:5px;
+}
+.keyword_heading{
+  font-size:26px;
+  border-bottom:1px solid #e6ecf0;
+  padding-bottom:8px;
+}
+.country{
+  font-size:18px;
+  color:silver;
+  font-weight:300;
+  margin:10px 0;
+
+}
+.keyword_name{
+  margin-bottom:8px;
+
+}
+.keyword_tweets{
+  margin-top:7px;
+  color:silver;
+  font-size:14px;
+  font-weight: 300; 
+}
+
+.A1{
+  display:flex;
+  margin-left:120px;
+  align-items: center;
+  font-size: 17px;
+  padding:4px;
+  background: #1da1f2;
+  color:#f5f8fa;
+  outline:none;
+  border-radius:35%;
+  border:1px solid #1da1f2;
+  margin-top:20px;
 }
